@@ -1,4 +1,4 @@
-# zcatcher
-## Sleep Management for Mental Illnesses
+# zCatcher
+### Sleep Management for Mental Illnesses
 
 _under development_

@@ -22,6 +22,10 @@ gem "uglifier"
 gem "bulk_insert"
 gem "pusher"
 
+gem 'devise'
+gem 'omniauth-fitbit'
+gem 'fitbit_api'
+
 group :development do
   gem "parallel_tests"
   gem "better_errors"
