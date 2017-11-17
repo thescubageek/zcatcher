@@ -15,7 +15,10 @@ gem "rack-cors"
 gem "retriable", '~> 2.1'
 gem "httparty"
 gem "pg"
+gem 'jquery-rails'
+gem 'turbolinks'
 
+gem "coffee-rails"
 gem "sprockets-es6"
 gem "sassc-rails"
 gem "uglifier"
@@ -25,6 +28,17 @@ gem "pusher"
 gem 'devise'
 gem 'omniauth-fitbit'
 gem 'fitbit_api'
+
+group :production do
+  gem 'puma', '~> 3.3'
+  gem "puma_worker_killer"
+  gem "lograge"
+  gem "rails_12factor"
+  gem "newrelic_rpm"
+  gem "dalli"
+  gem 'autoscaler'
+  gem "slack-notifier"
+end
 
 group :development do
   gem "parallel_tests"
@@ -36,6 +50,8 @@ group :development do
   gem "flamegraph"
   gem "stackprof"
   gem "memory_profiler"
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
 end
 
 group :development, :test do

@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
+  root to: "dashboards#index"
   mount Sidekiq::Web => '/sidekiq'
 
-  namespace :api, defaults: { format: :json } do
-    post 'oauth', to: "users#show"
-
-    resources :users, only: [:show]
-  end
+  devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks" }
 end
+
