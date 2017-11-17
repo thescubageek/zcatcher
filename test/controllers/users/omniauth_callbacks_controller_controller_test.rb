@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Users::OmniauthCallbacksControllerControllerTest < ActionDispatch::IntegrationTest
+class OmniauthCallbacksControllerControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end

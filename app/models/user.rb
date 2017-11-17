@@ -34,8 +34,8 @@ class User < ApplicationRecord
 
     FitbitAPI::Client.new(
       refresh_token: fitbit_identity.refresh_token,
-      client_id: Rails.application.secrets.fitbit_api_client_id,
-      client_secret: Rails.application.secrets.fitbit_api_client_secret
+      client_id: ENV['FITBIT_CLIENT_ID'],
+      client_secret: ENV['FITBIT_CLIENT_SECRET']
     )
   end
 end
